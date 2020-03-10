@@ -12,13 +12,14 @@ class Artist
 
   def initialize
     # @@artists << self
-    self.class.all << self
+    # self.class.all << self will be replaced by super
+    super
     @songs = []
   end
 
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
+  # def self.find_by_name(name)
+  #   @@artists.detect{|a| a.name == name}
+  # end
 
   def self.all
     @@artists
